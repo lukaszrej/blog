@@ -13,10 +13,8 @@ const Footer = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            Autor Sukcesu @2022
-
+            2022
           </Typography>
         </Toolbar>
       </Container>

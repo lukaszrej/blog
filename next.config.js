@@ -1,5 +1,5 @@
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: true
 }
 
 const withMDX = require('@next/mdx')({
