@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Container, CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from 'src/theme';
-import { getSortedPosts } from 'src/helpers/post';
-import Header from 'src/components/Header/Header';
-import Footer from 'src/components/Footer/Footer';
-import Date from 'src/components/Date/Date';
+import { theme } from 'theme';
+import { getSortedPosts } from 'helpers/post';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import Date from 'components/Date/Date';
 
 export async function getStaticProps() {
   const posts = getSortedPosts();

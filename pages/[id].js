@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { getPost, getPostIds } from 'src/helpers/post';
-import Date from 'src/components/Date/Date';
+import { getPost, getPostIds } from 'helpers/post';
+import Date from 'components/Date/Date';
 
 export default function Post({ post }) {
   return (

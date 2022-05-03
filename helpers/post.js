@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import html from 'remark-html';
 import { remark } from 'remark';
 
-const postsDirectory = path.join(process.cwd(), 'src/posts');
+const postsDirectory = path.join(process.cwd(), 'posts');
 
 function sortPosts(posts) {
   return posts.sort(({ date: a }, { date: b }) => {
