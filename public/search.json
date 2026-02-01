@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Sample Blog Post",
+    "url": "/blog/sample-post",
+    "date": "2026-01-01",
+    "excerpt": "This is a sample blog post.",
+    "categories": ["Design", "Web Development"]
+  }
+]
