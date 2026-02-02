@@ -19,7 +19,7 @@ export const config: SiteConfig = {
   author: {
     name: "Łukasz Rej",
     bio: "Frontend developer",
-    avatar: "/src/assets/lukasz-avatar.png",
+    avatar: "/blog/lukasz-avatar.png",
   },
   social: {
     github: "https://github.com/lukaszrej",
