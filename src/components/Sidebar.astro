@@ -17,9 +17,9 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
   <!-- Bio Section -->
   <section class="bio-section">
     <div class="avatar-container">
-      <!-- {config.author.avatar ? (
+      {config.author.avatar ? (
         <img src={config.author.avatar} alt={config.author.name} class="avatar" />
-      ) : ( -->
+      ) : (
         <div class="avatar-placeholder">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Circular mask to contain the silhouette -->
@@ -38,7 +38,7 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
             </g>
           </svg>
         </div>
-      <!-- )} -->
+      )}
     </div>
     <h3 class="author-name">{config.author.name}</h3>
     <p class="bio-text">{config.author.bio}</p>

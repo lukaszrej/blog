@@ -4,6 +4,7 @@ export interface SiteConfig {
   author: {
     name: string;
     bio: string;
+    avatar: string;
   };
   social: {
     github?: string;
@@ -18,6 +19,7 @@ export const config: SiteConfig = {
   author: {
     name: "Łukasz Rej",
     bio: "Frontend developer",
+    avatar: "/src/assets/lukasz-avatar.png",
   },
   social: {
     github: "https://github.com/lukaszrej",
