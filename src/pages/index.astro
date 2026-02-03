@@ -1,4 +1,5 @@
 ---
+import Hero from '../components/Hero.astro';
 import Layout from '../components/Layout.astro';
 import { calculateReadingTime, extractTextFromMarkdown } from '../utils/reading-time';
 
@@ -22,13 +23,12 @@ const sortedPosts = allPosts
 
 <Layout title="Blog" description="Personal blog. Written by a real human">
   <div class="blog-page">
-    <header class="blog-header">
-      <h1 class="blog-title">Blog</h1>
-      <p class="blog-description">
-        Exploring what's currently is interesting for me, from technology through dance to other art forms.
-      </p>
-      <hr class="blog-rule" />
-    </header>
+    <Hero
+      title="Blog"
+      description="Exploring what's currently is interesting for me, from technology through dance to other art forms."
+      imageSrc="/blog/banner.jpg"
+      
+    />
 
     {sortedPosts.length > 0 ? (
       <div class="posts-list">
@@ -77,43 +77,6 @@ const sortedPosts = allPosts
 </Layout>
 
 <style>
-
-
-  .blog-header {
-    text-align: left;
-    margin-bottom: calc(var(--grid-unit) * 8);
-  }
-
-  .blog-title {
-    font-family: var(--font-heading-primary);
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.1;
-    margin-bottom: calc(var(--grid-unit) * 3);
-  }
-
-  .blog-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin-bottom: calc(var(--grid-unit) * 4);
-    max-width: 600px;
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-
-  .blog-rule {
-    height: 4px;
-    background-color: var(--color-accent);
-    border: none;
-    width: 120px;
-    margin: 0 0 0 0;
-  }
-
   .posts-list {
     display: flex;
     flex-direction: column;
@@ -122,7 +85,7 @@ const sortedPosts = allPosts
 
   .post-item {
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: calc(var(--grid-unit) * 4);
+    padding: calc(var(--grid-unit) * 3) 0;
   }
 
   .post-item:last-child {
