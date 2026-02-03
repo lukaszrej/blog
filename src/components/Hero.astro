@@ -1,0 +1,142 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  imageSrc: string;
+  height?: string;
+}
+
+const {
+  title,
+  description,
+  imageSrc,
+} = Astro.props;
+---
+
+<section class="blog-hero" >
+  <img src={imageSrc} alt="" class="blog-hero__image" />
+
+  <div class="blog-hero__overlay" />
+
+  <header class="blog-hero__content">
+    <h1 class="blog-hero__title">{title}</h1>
+
+    {description && (
+      <p class="blog-hero__description">{description}</p>
+    )}
+
+    <hr class="blog-hero__rule" />
+  </header>
+</section>
+
+<style>
+  .blog-hero {
+    position: relative;
+    width: 100%;
+    height: var(--hero-height);
+    height: 420px;
+    overflow: hidden;
+  }
+
+  .blog-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.15)
+    );
+    z-index: 1;
+  }
+
+
+  .blog-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: unset;
+  }
+
+  .blog-hero__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--grid-unit) * 6);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.2)
+    );
+  }
+
+  .blog-hero__content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: calc(var(--grid-unit) * 6);
+
+      padding-top: calc(var(--grid-unit) * 8);
+
+  }
+
+  .blog-hero__title {
+    font-family: var(--font-heading-primary);
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: calc(var(--grid-unit) * 3);
+    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .blog-hero__description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin-bottom: calc(var(--grid-unit) * 4);
+  }
+
+  .blog-hero__rule {
+    height: 4px;
+    width: 120px;
+    background-color: white;
+    border: none;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .blog-hero {
+      height: 50vh;
+    }
+
+    .blog-hero__content {
+      padding: calc(var(--grid-unit) * 4);
+    }
+
+    .blog-hero__title {
+      font-size: 2.5rem;
+    }
+
+    .blog-hero__description {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .blog-hero {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+  }
+</style>
